@@ -13,19 +13,19 @@
 ```
 bash 
 useradd
- passwd
- usermod
- userdel 
+passwd
+usermod
+userdel 
 group add
 group del
 group mod
 groups 
 id
- newgrp
-g passwd
- chgrp 
+newgrp
+passwd
+chgrp 
 chown
- chmod
+chmod
 ```
 
 * Самоятельно посмотрите man по каждой
