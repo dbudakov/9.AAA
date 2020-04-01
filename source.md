@@ -1,4 +1,5 @@
-What is PAM? [[EN]](https://medium.com/information-and-technology/wtf-is-pam-99a16c80ac57)    
+Beginer  
+1. What is PAM? /etc/pam.d/config-util [[EN]](https://medium.com/information-and-technology/wtf-is-pam-99a16c80ac57)  
 The Linux-PAM Guides [[EN]](http://www.linux-pam.org/Linux-PAM-html/)    
 CAP_SYS_ADMIN: the new root [[EN]](https://lwn.net/Articles/486306/)  
 pam_time (8) [[EN]](https://www.systutorials.com/docs/linux/man/8-pam_time/)    
