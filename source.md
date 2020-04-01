@@ -1,6 +1,6 @@
 Beginer  
 1. What is PAM? "/etc/pam.d/config-util" [[EN]](https://medium.com/information-and-technology/wtf-is-pam-99a16c80ac57)  
-2. The Linux-PAM Guides [[EN]](http://www.linux-pam.org/Linux-PAM-html/)    
+   
 3. CAP_SYS_ADMIN: the new root [[EN]](https://lwn.net/Articles/486306/)  
 4. pam_time (8) [[EN]](https://www.systutorials.com/docs/linux/man/8-pam_time/)    
 5. pam_script(5) [[EN]](https://linux.die.net/man/5/pam_script)    
@@ -9,3 +9,4 @@ Beginer
 
 Advanced  
 1. PAM overview. Contributed by: Keith Winston [[EN]](http://susefaq.sourceforge.net/howto/pam.html)  
+2. The Linux-PAM Guides [[EN]](http://www.linux-pam.org/Linux-PAM-html/)  
