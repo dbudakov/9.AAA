@@ -10,4 +10,5 @@ Advanced
 1. PAM overview. Contributed by: Keith Winston [[EN]](http://susefaq.sourceforge.net/howto/pam.html)  
 2. The Linux-PAM Guides [[EN]](http://www.linux-pam.org/Linux-PAM-html/)  
 3. CAP_SYS_ADMIN: the new root [[EN]](https://lwn.net/Articles/486306/)  
-4. Как работает PAM [[RUS]](https://www.opennet.ru/base/net/pam_linux.txt.html)  
+4. Как работает PAM [[RUS]](https://www.opennet.ru/base/net/pam_linux.txt.html) 
+2.5 [Корпоративная настройка](http://www.nestor.minsk.by/sr/2005/03/050309.html)  
