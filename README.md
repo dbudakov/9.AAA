@@ -20,4 +20,5 @@ echo '*;*;'$a';!Wd0000-2400 #rule1' >> /etc/security/time.conf
 Дополнительные утилиты:  
 ```sh
 gpasswd -d [username] [groupname] #удаление пользователя из группы
+crontab -e                        #настройка cron
 ```
