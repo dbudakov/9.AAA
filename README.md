@@ -17,5 +17,7 @@ sed -i '/rule1/d' /etc/security/time.conf
 echo '*;*;'$a';!Wd0000-2400 #rule1' > /etc/security/time.conf  
 ```
 
-
+Дополнительные утилиты:  
+```sh
 gpasswd -d [username] [groupname] #удаление пользоавателя из группы
+```
