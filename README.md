@@ -1,5 +1,5 @@
 ## Решение  
-Чистый скрипт pam.sh  
+Чистый скрипт [pam.sh](https://github.com/dbudakov/9.AAA/blob/master/homework/pam.sh)  
 Готовим стенд, создаем пользователей, назначаем пароль, и добаляем в группы  
 ```sh
 for i in admin user1 user2;do useradd $i;done
