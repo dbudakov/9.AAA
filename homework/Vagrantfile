@@ -25,6 +25,11 @@ sed -i '/rule1/d' /etc/security/time.conf
 echo '*;*;'\\$a';!Wd0000-2400 #rule1' >> /etc/security/time.conf 
 MEMBERS
 chmod +x /root/USERS && /root/USERS
+cat >> /root/CLOSE <<CLOSE
+#!/bin/bash
+for i in \\$(awk -F: '/users/ {print \\$NF}' /etc/group|sed 's/,/ /g');do pkill -9 -u \\$i;done
+CLOSE
+chmod +x /root/CLOSE
 cat >> /etc/crontab << TASKS
 #*/1  *  *  *  * root echo -e "######   ###   ###### \\n  odd minutes \\n######   ###   ######"|wall
 #*/2  *  *  *  * root echo -e "######   ###   ###### \\n  even minutes left \\n######   ###   ######"|wall
