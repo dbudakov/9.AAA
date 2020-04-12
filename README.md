@@ -31,11 +31,19 @@ echo '*;*;'$a';!Wd0000-2400 #rule1' >> /etc/security/time.conf
 MEMBERS
 chmod +x /root/USERS && /root/USERS
 ```
+пишим скрипт для закрытия сессия, после чего можно запускать его из `cron` в установленное время
+```sh
+cat >> /root/CLOSE <<CLOSE
+#!/bin/bash
+for i in \\$(awk -F: '/users/ {print \\$NF}' /etc/group|sed 's/,/ /g');do pkill -9 -u \\$i;done
+CLOSE
+chmod +x /root/CLOSE
+```
 добавляем строки для `cron`, здесь ежеминутная актуализация файлика /etc/security/time.conf, на предмет участников группы `users` и завершение сессий группы `users`, каждые 10 минут. 
 ```sh
 cat >> /etc/crontab << TASKS
-  *  *  *  *  *  root /root/USERS # актуализации
-*/10  *  *  *  * root pkill -9 -u user1 # Завершение сессии
+  *  *  *  *  *  root /root/USERS #актуализации пользователей для подключения
+*/10  *  *  *  * root /root/CLOSE #завершение сессий
 #*/1  *  *  *  * root echo -e "######   ###   ###### \n  odd minutes \n######   ###   ######"|wall
 #*/2  *  *  *  * root echo -e "######   ###   ###### \n  even minutes left \n######   ###   ######"|wall
 # 30 17 *  *  fri #время для предупреждения за 30 минут до сброса сессий
