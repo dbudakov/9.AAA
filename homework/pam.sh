@@ -21,10 +21,10 @@ for i in \\$(awk -F: '/users/ {print \\$NF}' /etc/group|sed 's/,/ /g');do pkill 
 CLOSE
 chmod +x /root/CLOSE
 cat >> /etc/crontab << TASKS
+*/10  *  *  *  * root /root/CLOSE
+  *  *  *  *  *  root /root/USERS
 #*/1  *  *  *  * root echo -e "######   ###   ###### \n  odd minutes \n######   ###   ######"|wall
 #*/2  *  *  *  * root echo -e "######   ###   ###### \n  even minutes left \n######   ###   ######"|wall
-*/10  *  *  *  * root pkill -9 -u user1
-  *  *  *  *  *  root /root/USERS
 # 30 17 *  *  fri #время для предупреждения за 30 минут до сброса сессий
 # 45 17 *  *  fri #время для предупреждения за 15 минут до сброса сессий
 TASKS
